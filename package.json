@@ -1,0 +1,22 @@
+{
+  "name": "dazn-tech-challenge",
+  "version": "0.0.0",
+  "description": "Technical challenge for DAZN",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "start-dev": "nodemon .",
+    "test": "mocha",
+    "test-coverage": "nyc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benmoran18/dazn-tech-challenge.git"
+  },
+  "author": "Ben Moran <benmoran18@yahoo.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benmoran18/dazn-tech-challenge/issues"
+  },
+  "homepage": "https://github.com/benmoran18/dazn-tech-challenge#readme"
+}
