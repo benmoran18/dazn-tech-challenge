@@ -2,6 +2,7 @@ const { expect } = require('chai')
 const config = require('../../config')
 const connectionPool = require('../../lib/models/connection-pool')
 const userId = 123
+const errors = require('../../lib/utils/errors')
 
 describe('Connection pool', async () => {
   for(let i = 0; i < config.maximumUserConnections; i++) {
@@ -14,12 +15,12 @@ describe('Connection pool', async () => {
       expect(await connectionPool.getConnectionCount(userId)).to.equal(i+1)
     })
   }
-  it('should fail getting connection', async () => {
+  it('should fail getting connection because maximum has been reached', async () => {
     try {
-      const connection = await connectionPool.getConnection(userId)
+      await connectionPool.getConnection(userId)
       return false
     } catch (error) {
-      expect(error).to.be.equal('Maximum number of connections exceeded')
+      expect(error).to.be.equal(errors.CODE_MAXIMUM_CONNECTIONS)
     }
   })
 })
