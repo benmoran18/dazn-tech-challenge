@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node index",
     "start-dev": "nodemon .",
-    "test": "mocha",
-    "test-coverage": "nyc"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
