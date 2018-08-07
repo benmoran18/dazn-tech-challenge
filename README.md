@@ -56,3 +56,9 @@ Creates a new connection for the specified user id.
     "message": "no connections available for user 123"
 }
 ```
+
+### Further tasks (mainly for scaling and reliability)
+
+1. Replace in-memory connection store with shared data storage (E.g. Redis, MYSQL, MongoDB)
+2. Separate out communication layer using something like RabbitMQ
+3. Integrate something like new relic for performance monitoring

@@ -8,6 +8,10 @@
     "test": "mocha",
     "lint": "./node_modules/eslint/bin/eslint.js lib"
   },
+  "pre-push": [
+    "test",
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/benmoran18/dazn-tech-challenge.git"
@@ -25,7 +29,8 @@
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-import": "^2.13.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.18.3"
+    "nodemon": "^1.18.3",
+    "pre-push": "^0.1.1"
   },
   "dependencies": {
     "express": "^4.16.3"
