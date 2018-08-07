@@ -53,7 +53,10 @@ Creates a new connection for the specified user id.
 ```
 {
     "success": false,
-    "message": "no connections available for user 123"
+    "error": {
+        "code": "CODE_MAXIMUM_CONNECTIONS",
+        "message": "Maximum number of connections exceeded"
+    }
 }
 ```
 
