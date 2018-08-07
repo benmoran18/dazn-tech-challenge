@@ -65,3 +65,4 @@ Creates a new connection for the specified user id.
 1. Replace in-memory connection store with shared data storage (E.g. Redis, MYSQL, MongoDB)
 2. Separate out communication layer using something like RabbitMQ
 3. Integrate something like new relic for performance monitoring
+4. Replace call to automated tests in pre-push hook with ci tool
